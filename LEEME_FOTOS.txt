@@ -1,0 +1,26 @@
+# PAOLO — versión V6 (fotografías locales restauradas)
+
+**IMPORTANTE:** el ZIP contiene el código, NO incluye fotografías porque los JPG están en tu Mac y no fueron adjuntados aquí. Conserva tu carpeta `img` original al lado de `index.html`.
+
+Estructura:
+```
+Paolo-Web/
+  index.html
+  css/styles.css
+  js/script.js
+  img/
+    perfil/IMG_4010.JPG, IMG_4011.JPG
+    infantil/IMG_4012.JPG ... IMG_4015.JPG
+    musica/IMG_4016.JPG
+    escultura/IMG_4017.JPG, IMG_4018.JPG
+    clasico/IMG_4019.JPG, IMG_4020.JPG
+    muralismo/IMG_4021.JPG ... IMG_4028.JPG
+    ocasional/ (vacía por ahora)
+```
+
+Todas las rutas son relativas a `index.html`, con `.JPG` en MAYÚSCULAS.
+La colección `musica` se presenta en el filtro **Cover Art**; `muralismo` se muestra en **Ilustración ocasional** para mantener las cinco categorías acordadas. La carpeta `ocasional` sigue vacía.
+
+Cada tarjeta abre fotografías de su carpeta; son **vistas de colección**, no se afirma que sean bocetos reales. Cuando lleguen fotos específicas del proceso creativo, se enlazarán individualmente a cada obra.
+
+**Antes de usar esta versión:** copia `index.html`, `css/` y `js/` a la carpeta donde YA se encuentra `img/`. NO borres ni reemplaces `img/`.
