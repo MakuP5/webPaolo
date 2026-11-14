@@ -43,6 +43,18 @@ addCollection('clasico','figurativo','Arte figurativo clásico','Archivo fotogr�
 addCollection('muralismo','ocasional','Muralismo','Archivo fotográfico · Muralismo (en ilustración ocasional)');
 addCollection('escultura','escultura','Escultura','Archivo fotográfico · Escultura');
 
+// V7: una fotografía de cada disciplina, más una vista adicional de muralismo.
+// Muralismo continúa agrupado también en Ilustración ocasional, como en V6.
+// Cambiar estos índices permite elegir otras imágenes cuando Paolo decida sus destacadas.
+const featuredIndexes = new Set([
+  art.findIndex(w => w.category === 'infantil'),
+  art.findIndex(w => w.category === 'cover'),
+  art.findIndex(w => w.category === 'ocasional'),
+  art.findIndex(w => w.category === 'figurativo'),
+  art.findIndex(w => w.category === 'escultura'),
+  art.findIndex(w => w.title === 'Muralismo · 02')
+].filter(i => i >= 0));
+
 // Si una ruta local falta, se muestra un aviso sin sustituirla por otra obra.
 function markMissingImage(img){
   img.onerror=()=>{img.onerror=null;img.style.opacity='.16';img.title=`No se encontró: ${img.getAttribute('src')}`;
@@ -54,7 +66,7 @@ function markMissingImage(img){
   };
 }
 const heroArt=document.getElementById('heroArt'),slideNum=document.getElementById('slideNum');let heroIndex=0;const heroWorks=[art.find(w=>w.category==='cover'),art.find(w=>w.category==='figurativo'),art.find(w=>w.category==='escultura')].filter(Boolean);heroWorks.forEach((w,i)=>{const d=document.createElement('div');d.className='slide'+(i===0?' active':'');d.style.backgroundImage=`url("${w.image}")`;d.style.backgroundPosition=w.position;d.setAttribute('aria-hidden','true');heroArt.appendChild(d)});function setHero(i){heroIndex=(i+heroWorks.length)%heroWorks.length;[...heroArt.children].forEach((e,j)=>e.classList.toggle('active',heroIndex===j));slideNum.textContent=`0${heroIndex+1} / 0${heroWorks.length}`;}document.getElementById('prev').onclick=()=>setHero(heroIndex-1);document.getElementById('next').onclick=()=>setHero(heroIndex+1);if(!matchMedia('(prefers-reduced-motion: reduce)').matches){setInterval(()=>setHero(heroIndex+1),7500)}
-const gallery=document.getElementById('gallery');art.forEach((w,i)=>{const card=document.createElement('article');card.className='work reveal';card.dataset.category=w.category;card.tabIndex=0;card.setAttribute('role','button');card.setAttribute('aria-label',`Ampliar ${w.title}`);card.innerHTML=`<div class="work-image"><img src="${w.image}" alt="${w.title}, imagen de referencia" loading="lazy" style="object-position:${w.position||'center'}"></div><div class="work-title"><span>${w.title}</span><span>0${i+1}</span></div><div class="work-type">${w.by}</div>`;card.addEventListener('click',()=>openLight(i));card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openLight(i)}});gallery.appendChild(card);markMissingImage(card.querySelector('img'))});document.querySelectorAll('.filter').forEach(btn=>btn.onclick=()=>{document.querySelectorAll('.filter').forEach(b=>{b.classList.toggle('active',b===btn);b.setAttribute('aria-pressed',String(b===btn))});document.querySelectorAll('.work').forEach(card=>{card.hidden=!(btn.dataset.filter==='all'||card.dataset.category===btn.dataset.filter)})});
+const gallery=document.getElementById('gallery');art.forEach((w,i)=>{const card=document.createElement('article');card.className='work reveal';card.dataset.category=w.category;card.dataset.collection=w.title.startsWith('Muralismo')?'muralismo':w.category;card.dataset.featured=String(featuredIndexes.has(i));card.hidden=!featuredIndexes.has(i);card.tabIndex=0;card.setAttribute('role','button');card.setAttribute('aria-label',`Ampliar ${w.title}`);card.innerHTML=`<div class="work-image"><img src="${w.image}" alt="${w.title}, imagen de referencia" loading="lazy" style="object-position:${w.position||'center'}"></div><div class="work-title"><span>${w.title}</span><span>0${i+1}</span></div><div class="work-type">${w.by}</div>`;card.addEventListener('click',()=>openLight(i));card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openLight(i)}});gallery.appendChild(card);markMissingImage(card.querySelector('img'))});document.querySelectorAll('.filter').forEach(btn=>btn.onclick=()=>{document.querySelectorAll('.filter').forEach(b=>{b.classList.toggle('active',b===btn);b.setAttribute('aria-pressed',String(b===btn))});document.querySelectorAll('.work').forEach(card=>{card.hidden=!(btn.dataset.filter==='featured'?card.dataset.featured==='true':btn.dataset.filter==='muralismo'?card.dataset.collection==='muralismo':card.dataset.category===btn.dataset.filter)})});
 const modal=document.getElementById('lightbox'),lightImg=document.getElementById('lightImg');
 let activeWork=0,activeStage=0,previousFocus=null;
 const thumbs=document.getElementById('processThumbs');

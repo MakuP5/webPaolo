@@ -17,3 +17,10 @@ Sustituir imágenes de referencia por fotografías autorizadas de las obras de P
 
 ## Desarrollo
 El sitio usa rutas relativas: `index.html` enlaza `css/styles.css` y `js/script.js`. Abrir la carpeta completa en VS Code.
+
+## Actualización V7 — Destacadas
+- Filtro de inicio: Destacadas (no Todas).
+- Selección de seis fotografías: una por cada una de las cinco categorías anteriores y una segunda imagen de Muralismo.
+- Filtro Muralismo adicional; el material de muralismo sigue accesible también desde Ilustración ocasional.
+- Título PAOLO uniforme, sin span en la L.
+- Las rutas img/ permanecen locales: mantener carpeta de fotografías junto a index.html.

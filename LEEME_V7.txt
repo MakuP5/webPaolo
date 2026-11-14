@@ -1,0 +1,9 @@
+PAOLO V7 — Destacadas
+
+Se cambió Todas por Destacadas.
+Al abrir la web aparecen seis fotos: una por categoría principal y una fotografía extra de Muralismo.
+Se añadió el filtro Muralismo; las fotos murales siguen visibles en Ilustración ocasional.
+Los filtros de disciplinas muestran todas las fotos de esa colección.
+La L del título PAOLO tiene el mismo estilo que las demás letras.
+
+IMPORTANTE: Este ZIP NO incluye las fotografías. Conserva tu carpeta img junto a index.html.
