@@ -1,0 +1,12 @@
+PAOLO V9.2 — Diagnóstico claro de Escultura 3D
+
+Conserva tus carpetas img/ y 3d/ (con busto.glb y busto.usdz).
+Abre index.html usando Live Server.
+Pulsa Explorar busto 3D. El texto bajo el visor ahora dirá exactamente qué falla:
+- GLB 404: archivo ausente o ruta incorrecta.
+- Three.js: biblioteca CDN sin acceso.
+- GLB parse: formato del modelo o extensiones.
+- WebGL: navegador o tarjeta gráfica.
+
+Revisa también DevTools > Console para detalles.
+La biblioteca Three.js carga desde Internet; modelos y fotos se cargan de tus carpetas locales.

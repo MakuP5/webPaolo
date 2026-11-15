@@ -1,0 +1,27 @@
+PAOLO — V9.1 · SALA DE ESCULTURA BAJO LAS OBRAS
+
+CAMBIOS
+- La sala 3D siempre está visible justo después de «Obras y colecciones».
+- En «Escultura» se muestran las fotografías de esa categoría y se desplaza hasta la sala 3D.
+- El visor carga el GLB al pulsar «Explorar busto 3D».
+- Si el modelo o la biblioteca faltan, queda la foto de referencia con un mensaje de error claro.
+- No se alteran los nombres de las fotos ni las rutas de la V8.
+
+PARA QUE SE VEAN LAS FOTOGRAFÍAS
+Este ZIP NO contiene tus JPG originales. Copia index.html, css/, js/ y 3d/ DENTRO de la misma carpeta que contiene img/.
+Asegúrate de tener:
+ img/perfil/IMG_4010.JPG
+ img/infantil/IMG_4012.JPG ... IMG_4015.JPG
+ img/musica/IMG_4016.JPG
+ img/escultura/IMG_4017.JPG, IMG_4018.JPG
+ img/clasico/IMG_4019.JPG, IMG_4020.JPG
+ img/muralismo/IMG_4021.JPG ... IMG_4028.JPG
+
+PARA QUE SE VEA EL MODELO
+Copia tus archivos reales 3d/busto.glb y 3d/busto.usdz a la carpeta 3d/.
+El ZIP contiene solo un archivo de instrucciones, NO el modelo.
+Abre la carpeta en VS Code y usa Live Server. No abras index.html como file:///.
+Three.js necesita Internet para descargarse desde jsdelivr.
+
+LICENCIA
+Antes de publicar, confirma autor, URL y licencia Sketchfab del busto.

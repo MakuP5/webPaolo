@@ -1,0 +1,10 @@
+PAOLO V9 · Busto Sketchfab GLB + USDZ
+
+1. Conserva la carpeta img/ existente junto a index.html.
+2. Copia busto.glb y busto.usdz dentro de 3d/ (no están en el ZIP).
+3. Inicia Live Server en VS Code desde esta carpeta, no abras index.html con file://.
+4. Haz clic en Escultura: aparece la sala e intenta cargar el busto.glb.
+5. Arrastra para girar, usa la rueda para zoom y Restablecer vista.
+6. En dispositivos Apple compatibles, el enlace AR abre 3d/busto.usdz.
+7. Antes de publicar, sustituye la atribución provisional por el autor, URL y licencia de Sketchfab.
+8. La web usa Three.js desde CDN, por lo que requiere Internet para esa biblioteca.

@@ -1,0 +1,11 @@
+PAOLO V9.3 · Sala de Escultura con Google <model-viewer>
+
+1. Copia los archivos de este ZIP en la carpeta de tu proyecto.
+2. CONSERVA tu carpeta img original (no incluida en el ZIP).
+3. Copia 3d/busto.glb y 3d/busto.usdz en la carpeta 3d (no incluidos).
+4. Inicia Live Server desde index.html y mantén conexión para model-viewer y Anime.js.
+5. En la sección "La materia cobra vida" gira el busto y utiliza los botones.
+6. Si no carga, revisa consola del navegador y prueba la ruta /3d/busto.glb.
+7. Añade los créditos de Sketchfab antes de publicar.
+
+La web conserva las galerías y fotografías por rutas relativas img/. No inventamos ni incluimos imágenes originales.

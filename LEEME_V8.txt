@@ -1,0 +1,20 @@
+PAOLO V8 — EXPERIENCIA ARTÍSTICA
+
+CAMBIOS
+- Se conserva la web V7 y las rutas a fotografías locales (img/).
+- Efecto de apertura cinematográfica, letras de portada animadas, entrada de tarjetas, trazo de tinta y transición de fotografías.
+- Se usan archivos nuevos css/animations.css y js/animations.js.
+- Anime.js 4 se carga desde CDN; si no hay conexión, se usa Web Animations API del navegador.
+- Se respeta prefers-reduced-motion y ahorro de datos.
+- Three.js queda para una futura vista 3D de esculturas cuando existan archivos 3D auténticos.
+
+INSTALACIÓN
+1. Descomprime en tu carpeta de proyecto.
+2. CONSERVA tu carpeta img/ ORIGINAL, que no está dentro de este ZIP.
+3. Abre index.html con Live Server o en el navegador.
+4. Confirma que se ven las imágenes locales y funcionan mini galerías, filtros y formulario.
+
+NOTAS
+- El nombre PAOLO utiliza letras visualmente uniformes (sin span especial de la L).
+- Las etiquetas de procesos siguen siendo provisionales hasta recibir los bocetos de Paolo.
+- Redes y contacto continúan pendientes de información real.

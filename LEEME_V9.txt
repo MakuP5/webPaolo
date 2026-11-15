@@ -1,0 +1,25 @@
+PAOLO — V9 / SALA DE ESCULTURA 3D
+
+NOVEDADES
+- Nueva sección Sala 3D: pieza artística conceptual generada por geometría Three.js.
+- Arrastrar para rotar; scroll / gesto táctil para zoom; botón reset y rotación automática.
+- Acabados marfil/piedra y bronce (solo para el estudio 3D de ejemplo).
+- El botón «Entrar en la sala 3D» evita ejecutar WebGL innecesariamente.
+- La escena pausa su render cuando no está visible o la pestaña está oculta.
+- Fotografía img/escultura/IMG_4017.JPG como respaldo cuando WebGL no está disponible.
+- Mantiene la V8 (galería Destacadas, categorías, rutas IMG_XXXX.JPG, minigalerías y contacto).
+
+INSTALACIÓN
+1. Descomprime la carpeta manteniendo su estructura.
+2. Copia tu carpeta img/ existente al lado de index.html SIN reemplazar las fotos.
+3. Abre el proyecto con VS Code y un servidor local (por ejemplo Live Server), no con file://.
+4. Se requiere conexión a Internet para descargar Three.js desde jsDelivr y Anime.js.
+5. Visita «Sala 3D» y pulsa «Entrar en la sala 3D».
+
+PARA USAR UNA ESCULTURA REAL
+1. Exporta un modelo 3D de Paolo a .glb (con permisos del artista).
+2. Guárdalo en models/escultura-paolo.glb.
+3. En js/sculpture.js, cambia MODEL_URL = '' por MODEL_URL = 'models/escultura-paolo.glb'.
+4. Ajusta posición y escala si es necesario. La selección de materiales es exclusiva del estudio demo.
+
+NOTA: La escultura procedimental NO representa una obra real de Paolo. Por ahora es una visualización conceptual.
